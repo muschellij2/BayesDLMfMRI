@@ -1,0 +1,11 @@
+Package: BayesDLMfMRI
+Type: Package
+Title: Package for fRMI data analysis
+Version: 1.0
+Date: 2019-08-01
+Author: Johnatan Cardona J
+Maintainer: Who to complain to <yourfault@somewhere.net>
+Description: More about what it does (maybe more than one line)
+License: What license is it under?
+Imports: Rcpp (>= 1.0.1)
+LinkingTo: pbapply, Rcpp, RcppArmadillo, RcppDist
