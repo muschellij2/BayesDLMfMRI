@@ -22,7 +22,7 @@ IndividualVoxelFFBS <- function(posi.ffd, covariates, ffdc, m0, Cova, delta, S0,
         delta1 <- sqrt(delta)
         Beta1 <-  diag(1/c(rep(delta1, dim(covariates)[2])))
         
-        res <- .Individual_Backwards_Sampling(ffd1 = as.matrix(series.def), Cova = as.matrix(covariates), m0In = m01, c0In = Cova1, 
+        res <- Individual_Backwards_Sampling(ffd1 = as.matrix(series.def), Cova = as.matrix(covariates), m0In = m01, c0In = Cova1, 
                                               S0In = S01, beta0In = Beta1, nt0In = n0, NIn = N1, Nsimu = Nsimu1, CUTpos = Cutpos1)
         
         return(list(EvidenceJoint = as.vector(res$Eviden_joint), EvidenceMargin = as.vector(res$Eviden_margin), EvidenLTT=as.vector(res$eviden_lt)))
@@ -68,7 +68,7 @@ IndividualVoxelFFBS <- function(posi.ffd, covariates, ffdc, m0, Cova, delta, S0,
       
       
       
-      res <- .Individual_Backwards_Sampling(ffd1 = as.matrix(series.def), Cova = as.matrix(covariates), m0In = m01, c0In = Cova1, 
+      res <- Individual_Backwards_Sampling(ffd1 = as.matrix(series.def), Cova = as.matrix(covariates), m0In = m01, c0In = Cova1, 
                                             S0In = S01, beta0In = Beta1, nt0In = n0, NIn = N1, Nsimu = Nsimu1, CUTpos = Cutpos1)
       
       #EVIDENCE OF ACTIVATION FOR A SINGLE VOXEL TAKING INTO ACCOUNT THE INFORMATION OF THE ENTIRE CLUSTER OF SIZE q

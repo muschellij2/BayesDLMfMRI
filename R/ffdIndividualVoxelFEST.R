@@ -29,7 +29,7 @@ ffdIndividualVoxelFEST <- function(posi.ffd, covariates, ffdc, m0, Cova, delta, 
     }
     
     if(Test=="JointTest"){
-      res <- .Individual_FunctionalMultiTest(ffd1 = as.matrix(series.def), Cova = as.matrix(covariates), m0In = m01, c0In = Cova1, 
+      res <- Individual_FunctionalMultiTest(ffd1 = as.matrix(series.def), Cova = as.matrix(covariates), m0In = m01, c0In = Cova1, 
                                             S0In = S01, beta0In = Beta1, nt0In = n0, NIn = N1, Nsimu = Nsimu1, CUTpos = Cutpos1)
       
       return(list(EvidenceJoint = rep(NA, dim(covariates)[2]), EvidenceMargin = res$EvidenMarginal))
@@ -83,7 +83,7 @@ ffdIndividualVoxelFEST <- function(posi.ffd, covariates, ffdc, m0, Cova, delta, 
     
     
     if(Test=="LTT"){
-      res <- .Individual_FunctionalTestLT(ffd1 = as.matrix(series.def), Cova = as.matrix(covariates), m0In = m01, c0In = Cova1, S0In = S01,
+      res <- Individual_FunctionalTestLT(ffd1 = as.matrix(series.def), Cova = as.matrix(covariates), m0In = m01, c0In = Cova1, S0In = S01,
                                           beta0In = Beta1, nt0In = n0, NIn = N1, Nsimu = Nsimu1, CUTpos = Cutpos1)
       
       #EVIDENCE OF ACTIVATION FOR A SINGLE VOXEL TAKING INTO ACCOUNT THE INFORMATION OF THE ENTIRE CLUSTER OF SIZE q
@@ -91,7 +91,7 @@ ffdIndividualVoxelFEST <- function(posi.ffd, covariates, ffdc, m0, Cova, delta, 
     }
     
     if(Test=="JointTest"){
-      res <- .Individual_FunctionalMultiTest(ffd1 = as.matrix(series.def), Cova = as.matrix(covariates), m0In = m01, c0In = Cova1, 
+      res <- Individual_FunctionalMultiTest(ffd1 = as.matrix(series.def), Cova = as.matrix(covariates), m0In = m01, c0In = Cova1, 
                                             S0In = S01, beta0In = Beta1, nt0In = n0, NIn = N1, Nsimu = Nsimu1, CUTpos = Cutpos1)
       
       #EVIDENCE OF ACTIVATION FOR A SINGLE VOXEL TAKING INTO ACCOUNT THE INFORMATION OF THE ENTIRE CLUSTER OF SIZE q

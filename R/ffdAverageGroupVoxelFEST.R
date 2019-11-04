@@ -42,7 +42,7 @@ ffdAverageGroupVoxelFEST <- function(posi.ffd, DatabaseGroup, covariates, m0, Co
                                             for(j in 1:Ngroup){
                                               x = as.matrix(series.group[,j])
                                               series.def <- matrix((x - mean(x))/sd(x), ncol=1)
-                                              res = .Individual_FunctionalMultiTest(ffd1 = series.def, Cova = covariates, m0In = m01, c0In = Cova1,
+                                              res = Individual_FunctionalMultiTest(ffd1 = series.def, Cova = covariates, m0In = m01, c0In = Cova1,
                                                                                    S0In = S01, beta0In = Beta1, nt0In = n0, NIn = N1, Nsimu = Nsimu1, CUTpos = Cutpos)
                                               OnlineThetaM = OnlineThetaM + res$Online_theta
 
@@ -105,10 +105,10 @@ ffdAverageGroupVoxelFEST <- function(posi.ffd, DatabaseGroup, covariates, m0, Co
                                               x = as.matrix(series.group[(1+(j-1)*dim(covariates)[1]):(j*dim(covariates)[1]),])
                                               series.def <- apply(x, 2, function(y){(y-mean(y))/sd(y)})
 
-                                              res = .Individual_FunctionalMultiTest(ffd1 = series.def, Cova = covariates, m0In = m01, c0In = Cova1,
+                                              res = Individual_FunctionalMultiTest(ffd1 = series.def, Cova = covariates, m0In = m01, c0In = Cova1,
                                                                                    S0In = S01, beta0In = Beta1, nt0In = n0, NIn = N1, Nsimu = Nsimu1, CUTpos = Cutpos)
 
-                                              res2 = .Individual_FunctionalTestLT(ffd1 = series.def, Cova = covariates, m0In = m01, c0In = Cova1,
+                                              res2 = Individual_FunctionalTestLT(ffd1 = series.def, Cova = covariates, m0In = m01, c0In = Cova1,
                                                                                    S0In = S01, beta0In = Beta1, nt0In = n0, NIn = N1, Nsimu = Nsimu1, CUTpos = Cutpos)
 
                                               OnlineThetaM = OnlineThetaM + res$Online_theta
@@ -140,7 +140,7 @@ ffdAverageGroupVoxelFEST <- function(posi.ffd, DatabaseGroup, covariates, m0, Co
                                                x = as.matrix(series.group[(1+(j-1)*dim(covariates)[1]):(j*dim(covariates)[1]),])
                                                series.def <- apply(x, 2, function(y){(y-mean(y))/sd(y)})
 
-                                               res = .Individual_FunctionalMultiTest(ffd1 = series.def, Cova = covariates, m0In = m01, c0In = Cova1,
+                                               res = Individual_FunctionalMultiTest(ffd1 = series.def, Cova = covariates, m0In = m01, c0In = Cova1,
                                                                                      S0In = S01, beta0In = Beta1, nt0In = n0, NIn = N1, Nsimu = Nsimu1, CUTpos = Cutpos)
 
 

@@ -26,7 +26,7 @@ ffdGroupVoxelFEST <- function(posi.ffd, DatabaseGroup, covariates, m0, Cova, del
        Cova1 <- diag(rep(Cova, dim(covariates)[2]))
        delta1<- sqrt(delta)
        Beta1 <-diag(1/c(delta1, delta1))
-       res   <- .Group_FunctionalMultiTest(ffd1 = series.group, Cova = covariates, m0In = m0, c0In = Cova1, S0In = S0,
+       res   <- Group_FunctionalMultiTest(ffd1 = series.group, Cova = covariates, m0In = m0, c0In = Cova1, S0In = S0,
                                            beta0In = Beta1, nt0In = n0, flag1 = 0, NIn = N1, NS = Ngroup, Nsimu = Nsimu1, CUTpos = Cutpos)
 
        return( list(EvidenceJoint = res$EvidenMultivariate,
@@ -68,13 +68,13 @@ ffdGroupVoxelFEST <- function(posi.ffd, DatabaseGroup, covariates, m0, Cova, del
 
            if(Test=="LTT"){
 
-           res <- .Group_FunctionalTestLT(series.group, covariates, m0, Cova1, S0, Beta1, n0, sum(flag), N1, Ngroup, Nsimu1, Cutpos)
+           res <- Group_FunctionalTestLT(series.group, covariates, m0, Cova1, S0, Beta1, n0, sum(flag), N1, Ngroup, Nsimu1, Cutpos)
            return(as.vector(res$Eviden))
            }
 
            if(Test=="Joint"){
 
-             res   <- .Group_FunctionalMultiTest(ffd1 = series.group, Cova = covariates, m0In = m0, c0In = Cova1, S0In = S0,
+             res   <- Group_FunctionalMultiTest(ffd1 = series.group, Cova = covariates, m0In = m0, c0In = Cova1, S0In = S0,
                                                  beta0In = Beta1, nt0In = n0, flag1 = sum(flag), NIn = N1, NS = Ngroup, Nsimu = Nsimu1, CUTpos = Cutpos)
 
              return( list(EvidenceJoint = res$EvidenMultivariate,

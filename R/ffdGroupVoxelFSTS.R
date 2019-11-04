@@ -25,7 +25,7 @@ ffdGroupVoxelFSTS <- function(posi.ffd, DatabaseGroup, covariates, m0, Cova, del
        Cova1 <- diag(rep(Cova, dim(covariates)[2]))
        delta1<- sqrt(delta)
        Beta1 <-diag(1/c(delta1, delta1))
-       res   <- .Group_Functional_Equation(ffd1 = series.group, Cova = covariates, m0In = m0, c0In = Cova1, S0In = S0, 
+       res   <- Group_Functional_Equation(ffd1 = series.group, Cova = covariates, m0In = m0, c0In = Cova1, S0In = S0, 
                                            beta0In = Beta1, nt0In = n0, flag1 = 0, NIn = N1, NS = Ngroup, Nsimu = Nsimu1,
                                           CUTpos = Cutpos)
        
@@ -68,7 +68,7 @@ ffdGroupVoxelFSTS <- function(posi.ffd, DatabaseGroup, covariates, m0, Cova, del
            delta1 <- sqrt(delta)
            Beta1 <-diag(1/c(delta1, delta1))
            
-           res   <- .Group_Functional_Equation(ffd1 = series.group, Cova = covariates, m0In = m0, c0In = Cova1, S0In = S0, 
+           res   <- Group_Functional_Equation(ffd1 = series.group, Cova = covariates, m0In = m0, c0In = Cova1, S0In = S0, 
                                               beta0In = Beta1, nt0In = n0, flag1 = flag, NIn = N1, NS = Ngroup, Nsimu = Nsimu1,
                                               CUTpos = Cutpos)
            
