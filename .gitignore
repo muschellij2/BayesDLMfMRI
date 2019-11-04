@@ -1,0 +1,6 @@
+.Rproj.user
+R/.Rhistory
+.Rhistory
+src/*.o.tmp
+src/*.o
+src/*.so

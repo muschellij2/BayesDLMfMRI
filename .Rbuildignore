@@ -1,0 +1,10 @@
+^BayesDLMfMRI\.Rproj$
+^\.Rproj\.user$
+^\.Rhistory$
+^R/\.Rhistory$
+src/*.o.tmp
+src/*.o
+src/*.so
+^README\.Rmd$
+^\.travis\.yml$
+^appveyor\.yml$

@@ -1,11 +1,16 @@
 Package: BayesDLMfMRI
 Type: Package
-Title: Package for fRMI data analysis
+Title: Bayesian Matrix-Variate Dynamic Linear Model for 'fMRI' Analysis
 Version: 1.0
 Date: 2019-08-01
 Author: Johnatan Cardona J
-Maintainer: Who to complain to <yourfault@somewhere.net>
-Description: More about what it does (maybe more than one line)
-License: What license is it under?
-Imports: Rcpp (>= 1.0.1)
-LinkingTo: pbapply, Rcpp, RcppArmadillo, RcppDist
+Maintainer: Johnatan Cardona J <jcardonj@ime.usp.br>
+Description: Implements the Bayesian Matrix-Variate Dynamic Linear Model
+    in the work <https://arxiv.org/pdf/1910.12058.pdf>.
+License: GPL-2
+Imports: 
+    Rcpp (>= 1.0.1),
+    pbapply
+LinkingTo: Rcpp, RcppArmadillo, RcppDist
+RoxygenNote: 6.1.1
+Encoding: UTF-8
