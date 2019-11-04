@@ -5,8 +5,8 @@ Group_Functional_Backwards_Sampling <- function(ffd1, Cova, m0In, c0In, S0In, be
     .Call(`_BayesDLMfMRI_Group_Functional_Backwards_Sampling`, ffd1, Cova, m0In, c0In, S0In, beta0In, nt0In, flag1, NIn, NS, Nsimu, CUTpos)
 }
 
-Gruop_FunctionalTestLT <- function(ffd1, Cova, m0In, c0In, S0In, beta0In, nt0In, flag1, NIn, NS, Nsimu, CUTpos) {
-    .Call(`_BayesDLMfMRI_Gruop_FunctionalTestLT`, ffd1, Cova, m0In, c0In, S0In, beta0In, nt0In, flag1, NIn, NS, Nsimu, CUTpos)
+Group_FunctionalTestLT <- function(ffd1, Cova, m0In, c0In, S0In, beta0In, nt0In, flag1, NIn, NS, Nsimu, CUTpos) {
+    .Call(`_BayesDLMfMRI_Group_FunctionalTestLT`, ffd1, Cova, m0In, c0In, S0In, beta0In, nt0In, flag1, NIn, NS, Nsimu, CUTpos)
 }
 
 Group_FunctionalMultiTest <- function(ffd1, Cova, m0In, c0In, S0In, beta0In, nt0In, flag1, NIn, NS, Nsimu, CUTpos) {

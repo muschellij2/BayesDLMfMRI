@@ -28,9 +28,9 @@ BEGIN_RCPP
     return rcpp_result_gen;
 END_RCPP
 }
-// Gruop_FunctionalTestLT
-Rcpp::List Gruop_FunctionalTestLT(const arma::mat& ffd1, const arma::mat& Cova, const double m0In, const arma::mat& c0In, const double S0In, const arma::mat& beta0In, const double nt0In, const int flag1, const int NIn, const int NS, const int Nsimu, const int CUTpos);
-RcppExport SEXP _BayesDLMfMRI_Gruop_FunctionalTestLT(SEXP ffd1SEXP, SEXP CovaSEXP, SEXP m0InSEXP, SEXP c0InSEXP, SEXP S0InSEXP, SEXP beta0InSEXP, SEXP nt0InSEXP, SEXP flag1SEXP, SEXP NInSEXP, SEXP NSSEXP, SEXP NsimuSEXP, SEXP CUTposSEXP) {
+// Group_FunctionalTestLT
+Rcpp::List Group_FunctionalTestLT(const arma::mat& ffd1, const arma::mat& Cova, const double m0In, const arma::mat& c0In, const double S0In, const arma::mat& beta0In, const double nt0In, const int flag1, const int NIn, const int NS, const int Nsimu, const int CUTpos);
+RcppExport SEXP _BayesDLMfMRI_Group_FunctionalTestLT(SEXP ffd1SEXP, SEXP CovaSEXP, SEXP m0InSEXP, SEXP c0InSEXP, SEXP S0InSEXP, SEXP beta0InSEXP, SEXP nt0InSEXP, SEXP flag1SEXP, SEXP NInSEXP, SEXP NSSEXP, SEXP NsimuSEXP, SEXP CUTposSEXP) {
 BEGIN_RCPP
     Rcpp::RObject rcpp_result_gen;
     Rcpp::RNGScope rcpp_rngScope_gen;
@@ -46,7 +46,7 @@ BEGIN_RCPP
     Rcpp::traits::input_parameter< const int >::type NS(NSSEXP);
     Rcpp::traits::input_parameter< const int >::type Nsimu(NsimuSEXP);
     Rcpp::traits::input_parameter< const int >::type CUTpos(CUTposSEXP);
-    rcpp_result_gen = Rcpp::wrap(Gruop_FunctionalTestLT(ffd1, Cova, m0In, c0In, S0In, beta0In, nt0In, flag1, NIn, NS, Nsimu, CUTpos));
+    rcpp_result_gen = Rcpp::wrap(Group_FunctionalTestLT(ffd1, Cova, m0In, c0In, S0In, beta0In, nt0In, flag1, NIn, NS, Nsimu, CUTpos));
     return rcpp_result_gen;
 END_RCPP
 }
@@ -177,7 +177,7 @@ END_RCPP
 
 static const R_CallMethodDef CallEntries[] = {
     {"_BayesDLMfMRI_Group_Functional_Backwards_Sampling", (DL_FUNC) &_BayesDLMfMRI_Group_Functional_Backwards_Sampling, 12},
-    {"_BayesDLMfMRI_Gruop_FunctionalTestLT", (DL_FUNC) &_BayesDLMfMRI_Gruop_FunctionalTestLT, 12},
+    {"_BayesDLMfMRI_Group_FunctionalTestLT", (DL_FUNC) &_BayesDLMfMRI_Group_FunctionalTestLT, 12},
     {"_BayesDLMfMRI_Group_FunctionalMultiTest", (DL_FUNC) &_BayesDLMfMRI_Group_FunctionalMultiTest, 12},
     {"_BayesDLMfMRI_Group_Functional_Equation", (DL_FUNC) &_BayesDLMfMRI_Group_Functional_Equation, 12},
     {"_BayesDLMfMRI_Individual_Backwards_Sampling", (DL_FUNC) &_BayesDLMfMRI_Individual_Backwards_Sampling, 10},

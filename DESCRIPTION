@@ -10,7 +10,8 @@ Description: Implements the Bayesian Matrix-Variate Dynamic Linear Model
 License: GPL-2
 Imports: 
     Rcpp (>= 1.0.1),
-    pbapply
+    pbapply,
+    stats
 LinkingTo: Rcpp, RcppArmadillo, RcppDist
 RoxygenNote: 6.1.1
 Encoding: UTF-8

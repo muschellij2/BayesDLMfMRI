@@ -17,7 +17,7 @@ using namespace Rcpp ;
 //
 // [[Rcpp::export]]
 
-Rcpp::List Gruop_FunctionalTestLT(const arma::mat & ffd1, const arma::mat & Cova, const double m0In,
+Rcpp::List Group_FunctionalTestLT(const arma::mat & ffd1, const arma::mat & Cova, const double m0In,
                                        const arma::mat & c0In, const double S0In, const arma::mat & beta0In,
                                        const double nt0In, const int flag1, const int NIn, const int NS, const int Nsimu, const int CUTpos){
 
